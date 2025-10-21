@@ -1,0 +1,40 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./",
+    "rootDir": "./",
+    "outDir": "build",
+    "allowJs": true,
+    "alwaysStrict": true,
+    "sourceMap": true,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitReturns": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "noImplicitAny": true,
+    "noImplicitThis": false,
+    "strictNullChecks": true,
+    "resolveJsonModule": true,
+    "downlevelIteration": true,
+    "esModuleInterop": true,
+
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+
+    "types": ["vitest/globals"]
+  },
+  "ts-node": {
+    "files": true,
+    "transpileOnly": true
+  },
+  "extends": "@tsconfig/node22/tsconfig.json",
+  "include": [
+    "./index.js",
+    "src/index_local.js",
+    "@types/**/*",
+    "src/**/*",
+    "scripts/**/*",
+    "vitest.config.ts"
+  ],
+  "exclude": ["**/node_modules", "tests/**/*"]
+}

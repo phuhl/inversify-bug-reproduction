@@ -1,0 +1,26 @@
+{
+  "name": "minimal-bug-reproduction",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "DEV=true vitest"
+  },
+  "dependencies": {
+    "inversify": "^7.10.3"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.3",
+    "vitest": "^3.2.4",
+    "@tsconfig/node22": "^22.0.2"
+  },
+  "volta": {
+    "node": "22.19.0",
+    "npm": "10.9.3"
+  },
+  "nodemonConfig": {
+    "legacyWatch": true,
+    "ext": "ts js json"
+  },
+  "optionalDependencies": {
+    "fsevents": "^2.3.2"
+  }
+}
