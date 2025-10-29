@@ -1,13 +1,11 @@
-import { buildContainer1 } from "./buildContainer1";
-import { buildContainer2 } from "./buildContainer2";
-import { DisposalService } from "src/service";
+import { SomeService } from "src/service";
+import { SomeService as RelativeSomeService } from "./service";
 
-it("fails", () => {
-  const container = buildContainer1();
-  container.get(DisposalService);
+it("should resolve same class from same paths", () => {
+  expect(SomeService).toBe(SomeService);
+  expect(RelativeSomeService).toBe(RelativeSomeService);
 });
 
-it("works", () => {
-  const container = buildContainer2();
-  container.get(DisposalService);
+it("should resolve same class from different paths", () => {
+  expect(SomeService).toBe(RelativeSomeService);
 });
